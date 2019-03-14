@@ -1,0 +1,2 @@
+include ':app', ':contexttest', ':contexttest', ':MPChartLibb', ':MPChartExamplee', ':GestureLockk'
+include ':alipay_demo'

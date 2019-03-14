@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activity.ChongZhiActivity">
+
+    <include layout="@layout/common_title"/>
+
+    <com.example.wwwqq.p2p.ui.MyScrollView
+        android:layout_height="match_parent"
+        android:layout_width="match_parent">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_height="match_parent"
+            android:layout_width="match_parent">
+
+            <RelativeLayout
+                android:layout_height="44dp"
+                android:layout_width="match_parent"
+                android:background="#fff"
+                android:layout_marginTop="20dp">
+
+                <View
+                    android:layout_height="1dp"
+                    android:layout_width="match_parent"
+                    android:background="#ccc"/>
+
+                <TextView
+                    android:id="@+id/chongzhi_text"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:textSize="14sp"
+                    android:textColor="#333"
+                    android:text="充值金额"
+                    android:layout_marginLeft="20dp"
+                    android:layout_centerVertical="true"/>
+
+                <View
+                    android:id="@+id/view"
+                    android:layout_height="19dp"
+                    android:layout_width="1dp"
+                    android:background="#ccc"
+                    android:layout_marginLeft="18dp"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/chongzhi_text"/>
+
+                <!-- edittext如果默认看不到光标闪烁，是因为当前编译的系统版本edittext控件的光标颜色和你设置的EditText的背景颜色重叠了，所以看不到而已 android:textCursorDrawable="@null"设置光标的颜色和textColor属性保持一致 -->
+                <EditText
+                    android:id="@+id/et_chongzhi"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:background="@color/white"
+                    android:textSize="13sp"
+                    android:textColor="#333333"
+                    android:layout_marginLeft="18dp"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/view"
+                    android:textCursorDrawable="@null"
+                    android:singleLine="true"
+                    android:maxLength="19"
+                    android:inputType="numberDecimal"
+                    android:hint="请输入充值金额">
+                </EditText>
+
+            </RelativeLayout>
+
+            <View
+                android:layout_height="1dp"
+                android:layout_width="match_parent"
+                android:background="#ccc"/>
+
+            <RelativeLayout
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_marginTop="23dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp">
+
+                <TextView
+                    android:id="@+id/chongzhi_text2"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:textSize="11sp"
+                    android:textColor="#333"
+                    android:text="您的账户目前可用余额："/>
+
+                <TextView
+                    android:id="@+id/yue_tv"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:textSize="11sp"
+                    android:textColor="#e84768"
+                    android:text="0"
+                    android:layout_toRightOf="@+id/chongzhi_text2"/>
+
+                <TextView
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:textSize="11sp"
+                    android:text="元"
+                    android:layout_toRightOf="@+id/yue_tv"/>
+
+            </RelativeLayout>
+
+            <Button
+                android:id="@+id/btn_chongzhi"
+                android:layout_height="45dp"
+                android:layout_width="match_parent"
+                android:background="@drawable/btn_02"
+                android:layout_marginTop="22dp"
+                android:textSize="15sp"
+                android:textColor="#fff"
+                android:text="充值"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:clickable="false"/>
+
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:layout_marginTop="45dp"
+                android:textSize="14sp"
+                android:textColor="#666"
+                android:text="温馨提示："
+                android:layout_marginLeft="20dp"/>
+
+            <!--text当中使用\n即可换行书写多行文本内容-->
+
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_marginTop="10dp"
+                android:textSize="13dp"
+                android:textColor="#999"
+                android:text="1、所有投资保证金将有第三方平台托管。\n2、线上、线下充值手续费全免。\n3、请注意您的银行卡充值限额，以免造成不便。\n4、如果充值进的没有及时到帐，请与客服联系。\n5、禁止信用卡套现、虚假交易等行为，已经发现将予以处罚,包括但不限于：限制收款、冻结账户，永久停止服务等。\n6、如果您的账户充值金额为用于投资在本平台的理财服务,3个月之后才能进行体现申请。\n7、如果已在手机客户端充过值，则电脑端或手机端体现都只能使用该银行卡。除非原卡丢失、损坏或停用，否则一经绑定银行卡，将不得更换。此情况下，请联系客服并提供由银行提供的书面证明材料。" android:layout_marginLeft="20dp" android:layout_marginRight="20dp"/>
+        </LinearLayout>
+
+    </com.example.wwwqq.p2p.ui.MyScrollView>
+
+</LinearLayout>

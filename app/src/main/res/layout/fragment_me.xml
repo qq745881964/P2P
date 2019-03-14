@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent">
+
+    <include layout="@layout/common_title"/>
+    <com.example.wwwqq.p2p.ui.MyScrollView
+        android:layout_height="match_parent"
+        android:layout_width="match_parent">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_height="match_parent"
+            android:layout_width="match_parent">
+
+            <RelativeLayout
+                android:id="@+id/rl_me"
+                android:layout_height="120dp"
+                android:layout_width="match_parent"
+                android:gravity="center"
+                android:background="@color/my_title_bg">
+
+                <RelativeLayout
+                    android:id="@+id/rl_me_icon"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="4dp">
+
+                    <ImageView android:layout_height="64dp"
+                        android:layout_width="64dp"
+                        android:src="@drawable/my_user_bg_icon"
+                        android:scaleType="fitXY"/>
+
+                    <ImageView android:id="@+id/iv_me_icon"
+                        android:layout_height="62dp"
+                        android:layout_width="62dp"
+                        android:src="@drawable/my_user_default"
+                        android:scaleType="fitXY"
+                        android:layout_centerInParent="true"/>
+
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/tv_me_name"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:textSize="14sp"
+                    android:textColor="@color/white"
+                    android:text="Hi,welcome!"
+                    android:layout_below="@id/rl_me_icon"/>
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_margin="10dp">
+
+                <TextView
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:textColor="@android:color/holo_red_dark"
+                    android:text="学习提示:"/>
+
+                <TextView
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="5dp"
+                    android:text="充值我们将以集成支付宝sdk支付金额演示充值功能"/>
+
+                <TextView
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="5dp"
+                    android:text="提现业务:在p2p金融平台中,提现都不是实时到账的,而是审核提现,系统将会告知24小时内进行转账,如果未收到,请联系客服..."/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:gravity="center"
+                android:layout_margin="10dp">
+
+                <ImageView
+                    android:id="@+id/recharge"
+                    android:layout_height="wrap_content"
+                    android:layout_width="0dp"
+                    android:src="@drawable/my_recharge_bg"
+                    android:layout_weight="1"
+                    android:layout_marginRight="9dp"/>
+
+                <ImageView
+                    android:id="@+id/withdraw"
+                    android:layout_height="wrap_content"
+                    android:layout_width="0dp"
+                    android:src="@drawable/my_withdraw_bg"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="9dp"/>
+
+            </LinearLayout>
+
+            <!--充分使用textview属性代替LinearLayout布局-->
+            <TextView
+                android:id="@+id/ll_touzi"
+                android:text="投资管理"
+                android:drawableLeft="@drawable/my_invest_manage"
+                style="@style/LoginStyle"/>
+            <TextView
+                android:id="@+id/ll_touzi_zhiguan"
+                android:text="投资管理(直观)"
+                android:drawableLeft="@drawable/my_reward_manage"
+                style="@style/LoginStyle"/>
+            <TextView
+                android:id="@+id/ll_zichan"
+                android:text="资产管理"
+                android:drawableLeft="@drawable/my_asset_manage"
+                style="@style/LoginStyle"/>
+        </LinearLayout>
+    </com.example.wwwqq.p2p.ui.MyScrollView>
+</LinearLayout>

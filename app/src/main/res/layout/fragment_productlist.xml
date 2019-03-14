@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent">
+
+    <com.example.wwwqq.p2p.ui.MyTextView
+        android:id="@+id/tv_product_title"
+        android:text="硅谷金融壕运当头，首投返现最高达188元"
+        android:textSize="25sp"
+        android:textColor="@color/product_red_common"
+        android:layout_width="match_parent"
+        android:singleLine="true"
+        android:ellipsize="marquee"
+        android:layout_height="wrap_content" />
+
+    <ListView
+        android:id="@+id/lv_product_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:divider="@color/title_text"
+        android:dividerHeight="10dp"
+        ></ListView>
+
+</LinearLayout>
